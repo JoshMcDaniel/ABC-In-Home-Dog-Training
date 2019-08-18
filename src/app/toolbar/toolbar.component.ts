@@ -9,9 +9,8 @@ export class ToolbarComponent implements OnInit {
 
   navItems: Object[] = [
     {title: 'Home', icon: 'home', link: '/home'},
-    {title: 'Sermons', icon: 'book', link: '/sermons'},
     {title: 'About Us', icon: 'help', link: '/about'},
-    {title: 'Contact Us', icon: 'question_answer', link: 'contact'}
+    {title: 'Contact Us', icon: 'question_answer', link: '/contact'}
   ]
 
   constructor() { }

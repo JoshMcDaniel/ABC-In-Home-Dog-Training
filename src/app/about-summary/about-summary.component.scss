@@ -1,0 +1,15 @@
+.summary-section {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 10px;
+    // align-content: center;
+}
+
+.trainer-image {
+    height: 100%;
+}
+
+p {
+    font-size: 1.7em;
+    line-height: 2;
+}

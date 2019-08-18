@@ -20,13 +20,13 @@
 }
 
 .title-image-container {
-  width: 200px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   margin: 5px 0px;
-  background-image: url("src/assets/images/title.jpg");
+  background-image: url("src/assets/images/simple-logo.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .nav-items {
