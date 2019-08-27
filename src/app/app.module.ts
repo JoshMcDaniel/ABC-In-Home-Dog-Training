@@ -18,6 +18,11 @@ import { AboutSummaryComponent } from './about-summary/about-summary.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ServicesComponent } from './services/services.component';
+import { FaqComponent } from './faq/faq.component';
+import { ReviewsComponent } from './reviews/reviews.component';
+import { ServicesSummaryComponent } from './services-summary/services-summary.component';
+import { ContactSummaryComponent } from './contact-summary/contact-summary.component';
 
 
 @NgModule({
@@ -31,6 +36,11 @@ import { HttpClientModule } from '@angular/common/http';
     AboutSummaryComponent,
     IntroductionComponent,
     CarouselComponent,
+    ServicesComponent,
+    FaqComponent,
+    ReviewsComponent,
+    ServicesSummaryComponent,
+    ContactSummaryComponent,
   ],
   imports: [
     BrowserModule,

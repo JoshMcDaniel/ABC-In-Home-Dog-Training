@@ -1,15 +1,21 @@
 .summary-section {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-gap: 10px;
-    // align-content: center;
+    max-width: 1000px;
+    margin: auto;
+    height: auto;
 }
 
 .trainer-image {
-    height: 100%;
+    width: 100%;
+    vertical-align: middle;
 }
 
 p {
-    font-size: 1.7em;
-    line-height: 2;
+    font-size: 1.5em;
+    line-height: 1.5;
+    padding: 1em 0;
+}
+  
+.header-image {
+    background-image: url('src/assets/images/about/john_avatar.jpg');
+    background-size: cover;
 }

@@ -11,14 +11,14 @@
           <a routerLinkActive="mat-accent" routerLink="{{ item.link }}" mat-button>
             <span class="nav-items">
               {{ item.title }}
-          </span>
+            </span>
           </a>
         </span>
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
 
-  <mat-sidenav-container fxFlexFill>
+  <mat-sidenav-container class="sidenav-container" fxFlexFill>
     <mat-sidenav #sidenav>
       <mat-nav-list>
         <div *ngFor="let item of navItems">
@@ -31,7 +31,7 @@
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill class="nav-content">
       <!-- Currently selected page will be displayed here -->
-      <!-- <router-outlet></router-outlet> -->
+      <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </span>

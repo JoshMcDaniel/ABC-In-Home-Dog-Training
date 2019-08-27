@@ -1,13 +1,21 @@
 <span class="home-container">
-
     
-    <mat-card class="introduction-section">
+    <mat-card class="app-container">
         <app-introduction></app-introduction>
     </mat-card>
 
-    <mat-card>
-        <app-about-summary></app-about-summary>
-    </mat-card>
+    <span class="summary-container">
+        <div class="app-container column">
+            <app-about-summary></app-about-summary>
+        </div>
 
+        <div class="app-container column">
+            <app-services-summary></app-services-summary>
+        </div>
+
+        <div class="app-container column">
+            <app-contact-summary></app-contact-summary>
+        </div>
+    </span>
 
 </span>
