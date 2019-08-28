@@ -65,6 +65,15 @@ import { ContactSummaryComponent } from './contact-summary/contact-summary.compo
         path: 'contact', component: ContactComponent
       },
       {
+        path: 'services', component: ServicesComponent
+      },
+      {
+        path: 'reviews', component: ReviewsComponent
+      },
+      {
+        path: 'FAQ', component: FaqComponent
+      },
+      {
         path: '**', component: NotFoundComponent
       }
     ])

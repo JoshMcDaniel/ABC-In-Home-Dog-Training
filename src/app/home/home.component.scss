@@ -11,19 +11,18 @@
 }
 
 .summary-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.column {
-  flex: 33%;
-  max-width: 33%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+  justify-content: space-around;
+  margin: 0 2em;
 }
 
 @media (max-width: 960px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
+  .summary-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    margin: 0;
   }
 }
