@@ -1,8 +1,9 @@
+import { createCustomElement } from '@angular/elements';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Injector } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -78,10 +79,16 @@ import { ContactSummaryComponent } from './contact-summary/contact-summary.compo
       }
     ])
   ],
-  exports: [
-    CarouselComponent
-  ],
+  entryComponents: [CarouselComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private injector: Injector) {
+    const slider = createCustomElement(CarouselComponent, { injector });
+    customElements.define('motley-slider', slider);
+  }
+ 
+  ngDoBootstrap() {}
+ 
+ }

@@ -1,8 +1,3 @@
-img {
-  width: 100%;
-  height: 100%;
-}
-
 .container {
   height: 100%;
   overflow: hidden;
@@ -20,7 +15,10 @@ img {
   cursor: pointer;
 }
 
-
+img {
+  width: 100%;
+  height: 100%;
+}
 
 .slide-button:hover, .slide-button-select {
   width: 64px !important;
@@ -76,11 +74,11 @@ img {
   color: white;
 }
 
-#text {
-    font-size: 20px !important;
-}
-
 .selected {
   opacity: 1;
   transition: 1s;
+}
+
+h3 {
+  font-size: 48px;
 }

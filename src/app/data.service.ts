@@ -5,7 +5,6 @@ const URL = '../assets/data.json';
 @Injectable({
  providedIn: 'root'
 })
-// Used if there is a need to access online images for the slider as well
 export class DataService {
 
  constructor(private http: HttpClient) {}

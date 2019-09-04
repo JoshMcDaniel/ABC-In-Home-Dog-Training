@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "package": "cat dist/abc-in-home-dog-training/{runtime,polyfills,scripts,main}.js | gzip > elements.js.gz",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -16,6 +17,7 @@
     "@angular/common": "~8.2.0",
     "@angular/compiler": "~8.2.0",
     "@angular/core": "~8.2.0",
+    "@angular/elements": "^8.2.4",
     "@angular/flex-layout": "^8.0.0-beta.26",
     "@angular/forms": "~8.2.0",
     "@angular/material": "^8.1.2",

@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { DataService } from '../data.service';
 import { Result } from './result';
 import { Observable, Subscription } from 'rxjs';
@@ -8,7 +8,8 @@ import { timer } from 'rxjs';
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss']
+  styleUrls: ['./carousel.component.scss'],
+  encapsulation: ViewEncapsulation.Native
 })
 export class CarouselComponent implements OnInit, OnDestroy {
 
@@ -16,24 +17,27 @@ export class CarouselComponent implements OnInit, OnDestroy {
   transform: number;
   selectedIndex = 0;
   timer$: Observable<number>;
+  subscriptions = [];
   subscription: Subscription;
 
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    this.data.getData().subscribe((result: Result) => {
+    const dataSub = this.data.getData().subscribe((result: Result) => {
       this.sliderArray = result.sliderArray;
     });
     this.setTimer();
+    this.subscriptions.push(dataSub);
   }
 
-  setTimer() {
+  setTimer(): void {
     // Set slideshow timer
     this.timer$ = timer(5_000, 5_000);
-    this.subscription = this.timer$.subscribe(() => {
+    const timerSub = this.timer$.subscribe(() => {
       const i = this.selectedIndex;
       i < (this.sliderArray.length - 1) ? this.selected(i + 1) : this.selectedIndex = 0;
     });
+    this.subscriptions.push(timerSub);
   }
 
   selected(x) {
@@ -47,15 +51,16 @@ export class CarouselComponent implements OnInit, OnDestroy {
   }
 
    downSelected(i) {
-   this.transform =  100 - (i) * 50;
+   this.transform =  100 - (i) * 100;
      this.selectedIndex = this.selectedIndex + 1;
-     if (this.selectedIndex > 4) {
-       this.selectedIndex = 0;
-     }
+    const s = this.selectedIndex;
+      s < (this.sliderArray.length - 1) ? this.selected(s + 1) : this.selectedIndex = 0;
    }
 
    ngOnDestroy() {
-     this.subscription.unsubscribe();
+     this.subscriptions.forEach(sub => {
+       sub.unsubscribe();
+     });
    }
 
 }

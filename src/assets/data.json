@@ -2,6 +2,6 @@
 {
     "sliderArray":[
      {"img": "./assets/images/carousel/dog-with-children.jpg", "alt": "",  "text": "Some text here"},
-     {"img": "./assets/images//logo.png", "alt": "", "text": "365 Days Of weddings a year"}
+     {"img": "./assets/images//logo.png", "alt": "", "text": "This is the logo"}
     ]
   }
