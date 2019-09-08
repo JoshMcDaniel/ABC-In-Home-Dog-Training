@@ -1,1 +1,44 @@
-<p>services-summary works!</p>
+<mat-card>
+    <mat-card-title class="header">
+        What do you get with ABC?
+    </mat-card-title>
+    <p>
+        Whether your dog is just begining it's journey to better behaviour
+        or you are looking to take things to the next level, we have a service
+        package that is guaranteed to get you and your companion where you want to be.
+    </p>
+    <mat-accordion *ngIf="services">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{ services.services.basic.name }}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>
+                {{ services.services.basic.description }}
+            </p>
+            <mat-list role="list">
+                <mat-list-item *ngFor="let item of services.services.basic['bullet-points']" role="listitem">{{ item }}</mat-list-item>
+            </mat-list>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                            (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{ services.services.advanced.name }}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>
+                {{ services.services.advanced.description }}
+            </p>
+            <mat-list role="list">
+                <mat-list-item *ngFor="let item of services.services.basic['bullet-points']" role="listitem">{{ item }}</mat-list-item>
+            </mat-list>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <mat-card-actions class="actions">
+        <button mat-raised-button color="accent">
+            Show me more!
+        </button>
+    </mat-card-actions>
+</mat-card>

@@ -1,7 +1,9 @@
     
 {
-    "sliderArray":[
-     {"img": "./assets/images/carousel/dog-with-children.jpg", "alt": "",  "text": "Some text here"},
-     {"img": "./assets/images//logo.png", "alt": "", "text": "This is the logo"}
-    ]
-  }
+  "sliderArray": [
+    {"img": "./assets/images/carousel/dog-with-children.jpg", "alt": "Children with a dog",  "text": "Some text here"},
+    {"img": "./assets/images/carousel/training1.jpg", "alt": "",  "text": "Some text here"},
+    {"img": "./assets/images/carousel/training2.jpg", "alt": "",  "text": "Some text here"},
+    {"img": "./assets/images//logo.png", "alt": "", "text": "This is the logo"}
+  ]    
+}

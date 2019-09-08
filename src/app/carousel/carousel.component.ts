@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { DataService } from '../data.service';
-import { Result } from './result';
+import { SlideShowImages } from '../shared/result.model';
 import { Observable, Subscription } from 'rxjs';
 import { timer } from 'rxjs';
 
@@ -23,7 +23,7 @@ export class CarouselComponent implements OnInit, OnDestroy {
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    const dataSub = this.data.getData().subscribe((result: Result) => {
+    const dataSub = this.data.getSliderImages().subscribe((result: SlideShowImages) => {
       this.sliderArray = result.sliderArray;
     });
     this.setTimer();

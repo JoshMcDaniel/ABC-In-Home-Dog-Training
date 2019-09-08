@@ -1,0 +1,22 @@
+{
+    "services": {
+        "basic": {
+          "name": "Basic Obedience Program",
+          "description": "A great place to start",
+          "bullet-points": [
+            "bullet 1",
+            "bullet 2",
+            "bullet 3"
+          ]
+        },
+        "advanced": {
+            "name": "Advanced Off-Leash Training Program",
+            "description": "Take it to the next level",
+            "bullet-points": [
+                "bullet 1",
+                "bullet 2",
+                "bullet 3"
+                ]
+        }
+    }
+}

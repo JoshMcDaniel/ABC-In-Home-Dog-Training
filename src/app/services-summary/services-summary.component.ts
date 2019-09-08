@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+import { Services } from '../shared/result.model';
 
 @Component({
   selector: 'app-services-summary',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicesSummaryComponent implements OnInit {
 
-  constructor() { }
+  panelOpenState: boolean = false;
+  services: Services;
+
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.data.getServices().subscribe((result: Services) => {
+      this.services = result;
+      console.log(result);
+    });
   }
 
 }

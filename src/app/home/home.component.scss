@@ -1,15 +1,12 @@
 .home-container {
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-gap: 10em;
+    grid-gap: 2em;
 }
 
 .summary-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2em;
-  justify-content: space-around;
   margin: 0 2em;
 }
 
