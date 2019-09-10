@@ -9,15 +9,13 @@ const SERVICES_URL = '../assets/services.json';
 })
 export class DataService {
 
- constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
- getSliderImages() {
-   return this.http.get(SLIDER_IMAGES_URL).pipe(
-    
-   );
- }
+  getSliderImages() {
+    return this.http.get(SLIDER_IMAGES_URL)
+  }
 
- getServices() {
-  return this.http.get(SERVICES_URL);
-}
+  getServices() {
+    return this.http.get(SERVICES_URL);
+  }
 }

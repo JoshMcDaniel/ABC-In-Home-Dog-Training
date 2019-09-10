@@ -5,16 +5,11 @@ export interface SlideShowImages {
 }
 
 export interface Services {
-  services: {
-    basic: {
-      'name': string;
-      'description': string;
-      'bullet-points': string[];
-    },
-    advanced: {
+  services: [
+    {
       'name': string;
       'description': string;
       'bullet-points': string[];
     }
-  };
+  ];
 }

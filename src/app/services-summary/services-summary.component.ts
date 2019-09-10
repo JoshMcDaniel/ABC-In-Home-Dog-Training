@@ -10,14 +10,15 @@ import { Services } from '../shared/result.model';
 export class ServicesSummaryComponent implements OnInit {
 
   panelOpenState: boolean = false;
-  services: Services;
+  services: Services[] = [];
 
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    this.data.getServices().subscribe((result: Services) => {
-      this.services = result;
-      console.log(result);
+    this.data.getServices().subscribe((result: Services[]) => {
+      result['services'].forEach((service: Services) => {
+        this.services.push(service);
+      });
     });
   }
 

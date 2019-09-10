@@ -1,4 +1,14 @@
-.actions {
+.dialog, .service-panel {
+    max-width: 1000px !important;
+    margin: 0 auto;
+}
+
+.header, .actions {
     text-align: center;
     margin: 1em !important;
 }
+
+.dialog {
+    padding-bottom: 1em;
+}
+

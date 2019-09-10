@@ -2,38 +2,28 @@
     <mat-card-title class="header">
         What do you get with ABC?
     </mat-card-title>
-    <p>
+    <p class="dialog">
         Whether your dog is just begining it's journey to better behaviour
         or you are looking to take things to the next level, we have a service
         package that is guaranteed to get you and your companion where you want to be.
     </p>
     <mat-accordion *ngIf="services">
-        <mat-expansion-panel>
+        <mat-expansion-panel *ngFor="let service of services" class="service-panel">
             <mat-expansion-panel-header>
                 <mat-panel-title>
-                    {{ services.services.basic.name }}
+                    {{ service.name }}
                 </mat-panel-title>
             </mat-expansion-panel-header>
+            <div class="panel-header">
             <p>
-                {{ services.services.basic.description }}
+                {{ service.description }}
             </p>
             <mat-list role="list">
-                <mat-list-item *ngFor="let item of services.services.basic['bullet-points']" role="listitem">{{ item }}</mat-list-item>
+                <mat-list-item *ngFor="let bullet of service['bullet-points']" role="listitem">
+                    {{ bullet }}
+                </mat-list-item>
             </mat-list>
-        </mat-expansion-panel>
-        <mat-expansion-panel (opened)="panelOpenState = true"
-                            (closed)="panelOpenState = false">
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    {{ services.services.advanced.name }}
-                </mat-panel-title>
-            </mat-expansion-panel-header>
-            <p>
-                {{ services.services.advanced.description }}
-            </p>
-            <mat-list role="list">
-                <mat-list-item *ngFor="let item of services.services.basic['bullet-points']" role="listitem">{{ item }}</mat-list-item>
-            </mat-list>
+        </div>
         </mat-expansion-panel>
     </mat-accordion>
     <mat-card-actions class="actions">
