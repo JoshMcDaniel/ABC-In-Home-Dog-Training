@@ -24,6 +24,7 @@ import { FaqComponent } from './faq/faq.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ServicesSummaryComponent } from './services-summary/services-summary.component';
 import { ContactSummaryComponent } from './contact-summary/contact-summary.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { ContactSummaryComponent } from './contact-summary/contact-summary.compo
     ReviewsComponent,
     ServicesSummaryComponent,
     ContactSummaryComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

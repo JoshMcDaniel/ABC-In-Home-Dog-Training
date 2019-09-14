@@ -1,0 +1,14 @@
+<mat-card class="footer">
+    <div class="social">
+        <button mat-fab class="icon" *ngFor="let icon of socialIcons"
+        [ngStyle]="{'background-image':'url(' + icon.imageLink + ')'}">
+        </button>
+    </div>
+    <div class="advertisement">
+        <h2>Looking for pet food and supplements?</h2>
+        <p>
+            I personally recommend Life's Abundance. I know my dog loves their products!
+        </p>
+        <img id="advertisement-img" src="./assets/footer/advertisements/lifes_abundance.png" alt="lifes abundance logo">
+    </div>
+</mat-card>
